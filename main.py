@@ -22,6 +22,9 @@ st.markdown(
         .stMarkdown {
             font-size: 14px !important;
         }
+        .plotly-legend {
+            flex-direction: row !important;
+        }
     }
     </style>
     """,
@@ -130,21 +133,14 @@ fig.add_annotation(
 # Update layout to improve readability on mobile devices
 fig.update_layout(
     margin=dict(l=10, r=10, t=30, b=10),
-    height=450,
+    height=400,
     legend=dict(
         orientation="h",
         yanchor="bottom",
         y=1.02,
-        xanchor="right",
-        x=1
+        xanchor="center",
+        x=0.5
     ),
-    # title={
-    #     'text': "Option Profit/Loss Visualization",
-    #     'y':0.95,
-    #     'x':0.5,
-    #     'xanchor': 'center',
-    #     'yanchor': 'top'
-    # }
 )
 
 # Show plot in Streamlit
